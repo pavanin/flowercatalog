@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Comments from "./Comments";
-// import InputBox from "./Input";
+import Input from "./Input";
+import TextArea from "./TextArea";
 
 class GuestBook extends Component {
   state = {
@@ -36,14 +37,13 @@ class GuestBook extends Component {
   render() {
     return (
       <div className="container">
-        <input
+        <Input
           className="m-2"
           type="text"
           onChange={this.handleNameChange}
           placeholder="name"
         />
-        <br />
-        <textarea
+        <TextArea
           className="m-2"
           type="text"
           onChange={this.handleCommentChange}
