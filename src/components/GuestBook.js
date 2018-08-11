@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Comments from "./Comments";
 import Input from "./Input";
-import "./index.css";
 import TextArea from "./TextArea";
 import Button from "./Button";
 
