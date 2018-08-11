@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Comments from "./Comments";
 import Input from "./Input";
+import "./index.css";
 import TextArea from "./TextArea";
+import Button from "./Button";
 
 class GuestBook extends Component {
   state = {
@@ -37,23 +39,28 @@ class GuestBook extends Component {
   render() {
     return (
       <div className="container">
-        <Input
-          className="m-2"
-          type="text"
-          onChange={this.handleNameChange}
-          placeholder="name"
-        />
-        <TextArea
-          className="m-2"
-          type="text"
-          onChange={this.handleCommentChange}
-          placeholder="comment"
-        />
-        <br />
-        <button className="btn btn-info m-2" onClick={this.handleComment}>
-          Comment
-        </button>
-        <Comments comments={this.state.comments} />
+        <div className="inputs">
+          <Input
+            className="m-2"
+            type="text"
+            onChange={this.handleNameChange}
+            placeholder="name"
+          />
+          <TextArea
+            className="m-2"
+            type="text"
+            onChange={this.handleCommentChange}
+            placeholder="comment"
+          />
+          <Button
+            className="btn btn-info m-2"
+            onClick={this.handleComment}
+            text="Comment"
+          />
+        </div>
+        <div>
+          <Comments comments={this.state.comments} />
+        </div>
       </div>
     );
   }
