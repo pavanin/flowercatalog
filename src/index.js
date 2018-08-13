@@ -2,6 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.css";
-import GuestBook from "./components/GuestBook";
+import Routes from "./routes";
 
-ReactDOM.render(<GuestBook />, document.getElementById("root"));
+ReactDOM.render(<Routes />, document.getElementById("root"));
